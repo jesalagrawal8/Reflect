@@ -24,10 +24,7 @@ export const getDailyPrompt = unstable_cache(
       const data = await res.json();
       return data.slip.advice;
     } catch (error) {
-      return {
-        success: false,
-        data: "What's on your mind today?",
-      };
+      return "What's on your mind today?";
     }
   },
   ["daily-prompt"], // cache key
